@@ -6,29 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="scripts/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>Orbits</title>
 </head>
-<body>
+<body onload="showSlide()">
     
     <div class="nav-container">
         <p class="nav-name">Placeholder.com</p>
     </div>
-    <div class="center">
+    <button onclick="showSlide()" class="center">
         <div>
         </div>
-    </div>
-
+    </button>
     <h1>Placeholder</h1>
 
     <div class="main-container">
         <p class="over-p">Test this bla bla bla</p>
         <p class="under-p">mhm very nice yes</p>
-
-        <a>Alpha 1.0</a>
+        <a class="alpha">Upcoming events</a>
     </div>
 
     <div class="orbitBg"></div>
@@ -50,7 +49,27 @@
     <div class="saturn">
         <div class="dotSaturn"></div>
     </div>
+
+    <div id="slideout">
+        <ul>
+            <li><a>Upcoming tingdang</a></li>
+            <li>About us</li>
+            <li>Bingbong</li>
+            <li>Terms of service</li>
+            <li>Report an issue</li>
+        </ul>
+    </div>
+
  
     <div onclick="" id="triangle-down">&#8897;</div>
+
+
+    <img id="bg-two" src="https://wallpapercave.com/wp/wp2284539.png">
+    <div class="upcoming-container">
+        <h2 class="upcoming-title">Upcoming Events</h2>
+
+    </div>
+
+
 </body>
 </html>
