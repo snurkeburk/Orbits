@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>Orbits</title>
 </head>
-<body>
+<body onload="showSlide()">
     
     <div class="nav-container">
         <p class="nav-name">Placeholder.com</p>
@@ -61,9 +61,7 @@
             <li>Report an issue</li>
         </ul>
     </div>
-    <div class="lol"></div>
-    <div id="message">Please scroll to check if the box is visible</div>
-    <script src="scripts/main.js"></script>
+
     
     <div onclick="" id="triangle-down">&#8897;</div>
     
@@ -72,10 +70,36 @@
     <div class="upcoming-container">
         <p class="upcoming-title">Upcoming Events</p>
         <div class="comp-container">
-            <img class="comp" id="comp-one" src="nasa-logo-web-rgb.png"  height="auto">
-            <img class="comp" id="comp-two" src="Blue_Origin-Logo.wine.png"  height="auto">
-            <img class="comp" id="comp-three" src="SpaceX-Logo.png"  height="auto">
-            
+            <div class="small">
+            <button onclick="displayLaunchNasa()" class="comp-btn"><img class="comp" id="comp-one" src="nasa-logo-web-rgb.png"  height="auto"></button>
+            <ul id="nasaLaunch">
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+
+            </ul>
+            </div>
+            <div class="small">
+            <button onclick="displayLaunchBlueOrigin()" class="comp-btn"><img class="comp" id="comp-two" src="Blue_Origin-Logo.wine.png"  height="auto"></button>
+            <ul id="blueOriginLaunch">
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+
+            </ul>
+            </div>
+            <div class="small">
+            <button onclick="displayLaunchSpacex()" class="comp-btn"><img class="comp" id="comp-three" src="SpaceX-Logo.png"  height="auto"></button>
+            <ul id="spacexLaunch">
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+                <li>Launch - 2021-04-09</li>
+
+            </ul>
+            </div>
         </div>
     </div>
     

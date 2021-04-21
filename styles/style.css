@@ -8,7 +8,7 @@ html {
   width: 100%;
   height: 300vh;
   display: grid;
-  grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 3fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 2fr;
   grid-template-columns: 0.1fr 1fr 0.1fr;
   background: url("/wallpaper.jpg");
   background-color: black;
@@ -141,9 +141,13 @@ a:hover {
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
+    opacity: 0;
+
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+
   }
 }
 @keyframes slideUpDownUp {
@@ -158,18 +162,36 @@ a:hover {
   }
 }
 
-@keyframes fadeIn {
+
+@keyframes slideOutFromRight {
   0% {
-    transform: opacity(0%);
+    transform: translateX(0);
+    
   }
   100% {
-    transform: opacity(100%);
+    transform: translateX(-200%);
+  }
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+ }
+ @keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+ }
+
+@keyframes slideOutFromBottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
 
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
-
-
-
 .orbitBg {
   background-color: rgba(0, 0, 0, 0.068);
   border-style: none;
@@ -415,11 +437,37 @@ a:hover {
 }
 
 
-#comp-one {
-  animation: 3s ease-in-out 0s 1 slideInFromLeft;
+#comp-one, #comp-two, #comp-three {
+  visibility: hidden;
 }
-#comp-two {
-  animation: 2s ease-in-out 0s 1 slideInFromLeft;
-}#comp-three {
-  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+
+.small {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  text-align: end;
+}
+
+
+.small ul {
+  display: none;
+}
+.small ul li {
+  padding: 1rem;
+  list-style-type: decimal;
+}
+
+.comp-btn {
+  background: none;
+  border-style: none;
+  z-index: 30;
+}
+
+.comp-btn:hover{
+  cursor: pointer;
+}
+
+.comp-btn:focus{
+  border-style: none;
+  outline: none;
 }
