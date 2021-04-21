@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="scripts/main.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="scripts/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>Orbits</title>
 </head>
-<body onload="showSlide()">
+<body>
     
     <div class="nav-container">
         <p class="nav-name">Placeholder.com</p>
@@ -23,33 +24,34 @@
         </div>
     </button>
     <h1>Placeholder</h1>
-
+    
     <div class="main-container">
         <p class="over-p">Test this bla bla bla</p>
         <p class="under-p">mhm very nice yes</p>
-        <a class="alpha">Upcoming events</a>
+        <a href="#" class="alpha">Upcoming events</a>
     </div>
-
+    
     <div class="orbitBg"></div>
-      <div class="orbitMidBg"></div>
-      <div class="orbitMidInBg"></div>
-      <div class="orbitInBg"></div>
- 
-      <div class="sun">
+    <div class="orbitMidBg"></div>
+    <div class="orbitMidInBg"></div>
+    <div class="orbitInBg"></div>
+    <div class="box"></div>
+
+    <div class="sun">
         <div class="dotSun"></div>
     </div>
     <div class="earth">
         <div class="dotEarth"></div>
     </div>
- 
+    
     <div class="jupiter">
         <div class="dotJupiter"></div>
     </div>
- 
+    
     <div class="saturn">
         <div class="dotSaturn"></div>
     </div>
-
+    
     <div id="slideout">
         <ul>
             <li><a>Upcoming tingdang</a></li>
@@ -59,17 +61,23 @@
             <li>Report an issue</li>
         </ul>
     </div>
-
- 
+    <div class="lol"></div>
+    <div id="message">Please scroll to check if the box is visible</div>
+    <script src="scripts/main.js"></script>
+    
     <div onclick="" id="triangle-down">&#8897;</div>
-
-
-    <img id="bg-two" src="https://wallpapercave.com/wp/wp2284539.png">
+    
+    
+    
     <div class="upcoming-container">
-        <h2 class="upcoming-title">Upcoming Events</h2>
-
+        <p class="upcoming-title">Upcoming Events</p>
+        <div class="comp-container">
+            <img class="comp" id="comp-one" src="nasa-logo-web-rgb.png"  height="auto">
+            <img class="comp" id="comp-two" src="Blue_Origin-Logo.wine.png"  height="auto">
+            <img class="comp" id="comp-three" src="SpaceX-Logo.png"  height="auto">
+            
+        </div>
     </div>
-
-
+    
 </body>
 </html>

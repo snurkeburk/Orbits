@@ -1,0 +1,26 @@
+body,
+html {
+    display: flex;
+
+  background: url("https://www.wallpaperpimper.com/wallpapers/wt9pu4/imac-21-retina-4k/spacex.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  font-family: "Abel", sans-serif;
+  cursor: default;
+  color: #fff;
+}
+
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.main-h {
+    font-size: 10vw;
+    margin: auto;
+    font-weight: 100;
+    animation: 1s ease-in-out 0s 1 slideInFromRight;
+  }
