@@ -20,8 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 h1 {
   grid-row: 2;
   font-size: 15vw;
@@ -82,7 +80,7 @@ a:hover {
   margin-left: 0rem;
   background: none;
   border-style: none;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   opacity: 1;
 }
 
@@ -142,12 +140,10 @@ a:hover {
   0% {
     transform: translateY(-100%);
     opacity: 0;
-
   }
   100% {
     transform: translateY(0);
     opacity: 1;
-
   }
 }
 @keyframes slideUpDownUp {
@@ -162,24 +158,30 @@ a:hover {
   }
 }
 
-
 @keyframes slideOutFromRight {
   0% {
     transform: translateX(0);
-    
   }
   100% {
     transform: translateX(-200%);
   }
 }
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
- }
- @keyframes fadeOut {
-  from {opacity: 1;}
-  to {opacity: 0;}
- }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 @keyframes slideOutFromBottom {
   0% {
@@ -417,14 +419,12 @@ a:hover {
   text-align: center;
 }
 
-
 .comp-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 2rem;
   align-content: center;
-
 }
 
 .comp {
@@ -433,11 +433,11 @@ a:hover {
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 1.5rem;
-
 }
 
-
-#comp-one, #comp-two, #comp-three {
+#comp-one,
+#comp-two,
+#comp-three {
   visibility: hidden;
 }
 
@@ -447,7 +447,6 @@ a:hover {
   font-size: 1rem;
   text-align: end;
 }
-
 
 .small ul {
   display: none;
@@ -463,11 +462,97 @@ a:hover {
   z-index: 30;
 }
 
-.comp-btn:hover{
+.comp-btn:hover {
   cursor: pointer;
 }
 
-.comp-btn:focus{
+.comp-btn:focus {
   border-style: none;
   outline: none;
+}
+
+.nav-container-ipad {
+  display: none;
+}
+
+@media (min-width: 738px) {
+  body,
+  html {
+    width: 100%;
+    height: 300vh;
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 2fr;
+    grid-template-columns: 5vw 40vw 30vw;
+    grid-gap: 0.5rem;
+    background: url("/wallpaper.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: rgb(253, 253, 253);
+    font-family: "Abel", sans-serif;
+    cursor: default;
+    scroll-behavior: smooth;
+  }
+
+  .center {
+    display: none;
+  }
+
+  h1 {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 8vw;
+    margin: auto;
+    font-weight: 100;
+    text-align: center;
+    grid-column: 2;
+    animation: 1s ease-in-out 0s 1 slideInFromRight;
+  }
+  .main-container {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  .nav-container-ipad {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.1rem;
+    padding-top: 1rem;
+    width: 50vw;
+    font-size: 0.8rem;
+    flex-direction: row;
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .nav-container-ipad a:hover {
+    background: none;
+    cursor: pointer;
+  }
+
+  a.middle {
+    position: relative;
+  }
+
+  a.middle:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 1;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+  }
+
+  a.middle:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  .upcoming-container {
+    grid-column: 2;
+  }
 }
