@@ -9,7 +9,7 @@ html {
   height: 300vh;
   display: grid;
   grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 2fr;
-  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-columns: 20vw 60vw 20vw;
   background: url("/wallpaper.jpg");
   background-color: black;
   background-repeat: no-repeat;
@@ -18,6 +18,11 @@ html {
   font-family: "Abel", sans-serif;
   cursor: default;
   scroll-behavior: smooth;
+}
+
+a {
+  color: #fff;
+  background-color: none;
 }
 
 h1 {
@@ -155,6 +160,26 @@ a:hover {
   }
   100% {
     transform: translateY(-20%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-10);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75%{
+    transform: translateY(-10%);
+
+  }
+
+  100% {
+    transform: translateY(0%);
+
   }
 }
 
@@ -304,11 +329,10 @@ a:hover {
   margin: auto;
   grid-row: 3;
   grid-column: 2;
-
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: orbit;
-  animation-duration: 2s;
+  animation-duration: 6s;
 }
 
 .dotJupiter {
@@ -390,14 +414,22 @@ a:hover {
   animation: 1s ease-in-out 0s 1 slideInFromLeft;
 }
 #slideout ul li {
-  font-weight: 100;
-  color: rgb(220, 226, 243);
+ 
   z-index: 11;
   padding: 1rem;
   padding-left: 3rem;
   text-align: left;
   list-style: none;
+  color:#fff;
+  text-decoration: none;
 }
+
+#slideout ul li a {
+  font-weight: 100;
+  color: rgb(220, 226, 243);
+  text-decoration: none;
+}
+
 
 #bg-two {
   background-image: url("https://wallpapercave.com/wp/wp2284539.png");
@@ -409,9 +441,10 @@ a:hover {
   z-index: 1;
 }
 
-.upcoming-container {
-  grid-column: 2;
-  grid-row: 5;
+#upcoming-container {
+  position: absolute;
+  top: 130vh;
+  left: 20vw;
   color: seashell;
   z-index: 10;
   font-size: 2rem;
@@ -473,6 +506,66 @@ a:hover {
 
 .nav-container-ipad {
   display: none;
+}
+
+.nav-container-ipad a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  border-style: double;
+  border-width: 0.05rem;
+  position: absolute;
+  font-size: 2rem;
+  top: 130rem;
+  margin: 2rem;
+  text-align: center;
+  
+}
+
+.about-text {
+  border-top-style: none;
+  font-size: 0.9rem;
+  padding: 5rem;
+  padding-top: 0rem;
+  margin-bottom: 10rem;
+}
+
+
+#developer-notice {
+  display: block;
+  grid-row: 5;
+  height: 35%;
+  padding: 2rem;
+  border-radius: 2rem;
+  animation: 2s 0s infinite bounce;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgba(0, 0, 0, 0.815);
+  margin-left: 2rem;
+}
+
+#ok {
+  align-self: center;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  background: none;
+  margin-top: 1rem;
+  color: #fff;
+  border-style: none;
+  font-weight: 100;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+#ok:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 738px) {
@@ -552,7 +645,123 @@ a:hover {
     transform: scaleX(1);
   }
 
-  .upcoming-container {
-    grid-column: 2;
-  }
+
+  #upcoming-container {
+  position: absolute;
+  top: 70rem;
+  left: 5vw;
+  z-index: 10;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-align: center;
+  
+}
+
+.comp-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-content: center;
+  
+}
+
+.comp {
+  background-color: rgba(69, 52, 226, 0.068);
+  width: 20rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+#comp-one,
+#comp-two,
+#comp-three {
+  visibility: none;
+}
+
+
+.small ul {
+  position: absolute;
+  left: 20vw;
+  width: 50vw;
+}
+
+.small ul li {
+  list-style-type: none;
+}
+
+
+#about {
+  border-top-style: solid;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: rgba(220, 226, 243, 0.397);
+  border-width: 0.05rem;
+  position: absolute;
+  font-size: 2rem;
+  top: 120rem;
+  margin: 3.5rem;
+  text-align: center;
+  
+}
+
+.about-text {
+  border-top-style: none;
+  font-size: 0.9rem;
+  padding: 5rem;
+  padding-top: 0rem;
+  margin-bottom: 20rem;
+}
+
+
+#upload {
+  display: flex;
+  width: 8rem;
+  flex-direction: column;
+  float: right;
+  border-style: dotted;
+  border-width: 0.1rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+#upload p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+#upload button {
+  padding: 0.6rem;
+  margin-top: 1rem;
+  background: none;
+  color: #fff;
+  border-style: double;
+  border-color: #fff;
+}
+
+#upload button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.226);
+}
+
+#text {
+  padding-bottom: 5rem;
+}
+
+
+
+article {
+  position: relative;
+  top: 90rem;
+  left: 10rem;
+}
+
+}
+
+
+@media (min-width: 1200px) {
+
+  
+
 }

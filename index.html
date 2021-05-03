@@ -7,22 +7,25 @@
         <link rel="stylesheet" href="styles/style.css"> 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="scripts/devlogin.js"></script>
+        <script src="scripts/test.js"></script>
         <script src="scripts/main.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>Orbits</title>
 </head>
-<body onload="showSlide()">
+<body onload="logIn(), showSlide()">
     
     <div class="nav-container">
         <p class="nav-name">Orbits.com</p>
     </div>
     <div class="nav-container-ipad">
-        <a class="middle">Upcoming</a>
-        <a class="middle">About us</a>
-        <a class="middle">Bingbong</a>
+        <a class="middle" href="#upcoming-container">Upcoming</a>
+        <a class="middle" href="#about">News</a>
+        <a class="middle" href="/developer.html">Developer (req. login)</a>
         <a class="middle">Terms of service</a>
         <a class="middle">Report</a>
     </div>
@@ -31,11 +34,21 @@
         </div>
     </button>
     <h1>Orbits</h1>
-    
+    <div id="developer-notice">
+        <h4>We have noticed that you are logged in
+            as a developer!
+        </h4>
+        <p>Features such as uploading news are now available
+            further down on the main page. You can press <a href="#about">here</a> to 
+            scroll down to it.
+        </p>
+
+       <button onclick="hideOk()" id="ok">hide text</button>
+    </div>
     <div class="main-container">
         <p class="over-p">Test this bla bla bla</p>
         <p class="under-p">mhm very nice yes</p>
-        <a href="#" class="alpha">Upcoming events</a>
+        <a href="#upcoming-container" class="alpha">Upcoming events</a>
     </div>
     
     <div class="orbitBg"></div>
@@ -61,9 +74,9 @@
     
     <div id="slideout">
         <ul>
-            <li><a>Upcoming tingdang</a></li>
-            <li>About us</li>
-            <li>Bingbong</li>
+            <li><a href="#upcoming-container">Upcoming events</a></li>
+            <li>News</li>
+            <li><a href="/developer.html" >Developer (req. login)</a></li>
             <li>Terms of service</li>
             <li>Report an issue</li>
         </ul>
@@ -74,7 +87,7 @@
     
     
     
-    <div class="upcoming-container">
+    <div id="upcoming-container">
         <p class="upcoming-title">Upcoming Events</p>
         <div class="comp-container">
             <div class="small">
@@ -104,11 +117,39 @@
                 <li>Launch - 2021-04-09</li>
                 <li>Launch - 2021-04-09</li>
                 <li>Launch - 2021-04-09</li>
-
             </ul>
             </div>
         </div>
     </div>
+
+    <div id="about">
+        <p class="about-title">Newsletter</p>
+        <div class="about-text">
+        <p>Read our newest updates here as well as future plans for 
+            the website. As of now, only developers and / or other
+            autorized personel are allowed to post updates here.
+        </p>
+        <div id="upload">
+            <p>Developer box</p>
+            <form>
+            <input type="text" id="text" name="usrname" value>
+            </form>
+            
+            <button onclick="putCookie(document.getElementsByTagName('form'));">Done</button>
+            <button id="upload-article" onclick="logIn()">Upload</button>
+            <p>Latest update: </p><p id="test"></p>
+           
+        <div class="upload-article">
+
+
+        </div>
+        </div>
+    </div>
+
     
+    <script src="scripts/test.js"></script>
 </body>
+
+<script src="scripts/upload.js"></script>
+
 </html>

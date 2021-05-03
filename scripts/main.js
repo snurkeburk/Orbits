@@ -1,3 +1,6 @@
+
+
+
 function showSlide(){
     let showTools = document.getElementById("slideout");
     if (showTools.style.display === "none") {
@@ -8,6 +11,14 @@ function showSlide(){
     }
 }
 
+function hideOk(){
+    let ok = document.getElementById("developer-notice");
+    if (ok.style.display == "flex"){
+        ok.style.display = "none";
+    } else {
+        ok.style.display = "none";
+    }
+}
 
 // scroll animations
 
@@ -76,18 +87,8 @@ window.addEventListener("scroll",(event) => {
         spacex.style.animation = "slideInFromLeft 4s 1";
         spacex.style.visibility="visible";
         console.log("show");
-
     } 
-    if (scrollY < 600){
-        console.log("hide");
-        nasa.style.animation = "slideOutFromRight 1s 1";
-        blueOrigin.style.animation = "slideOutFromRight 2s 1";
-        spacex.style.animation = "slideOutFromRight 2s 1";
-        setTimeout(() => {  nasa.style.visibility = "hidden"; }, 1000);
-        setTimeout(() => {  spacex.style.visibility = "hidden"; }, 1000);
-        setTimeout(() => {  blueOrigin.style.visibility = "hidden"; }, 1000);
-
-    }
+  
 
 }
 });
@@ -98,7 +99,11 @@ window.addEventListener("scroll",(event) => {
 
 function displayLaunchNasa() {
     let nasa = document.getElementById('nasaLaunch');
-   
+    let width  = window.innerWidth || document.documentElement.clientWidth || 
+    document.body.clientWidth;
+    let height = window.innerHeight|| document.documentElement.clientHeight|| 
+    document.body.clientHeight;
+   if (width < 700){
     if (nasa.style.display === "none") {
         nasa.style.animation = "slideInFromTop 1s 1";
         nasa.style.display = "block";
@@ -107,23 +112,55 @@ function displayLaunchNasa() {
         nasa.style.animation = "slideOutFromBottom 1s 1";
         setTimeout(() => {  nasa.style.display = "none"; }, 1000);
     }
-   
+    } else if (width > 700){
+        if (nasa.style.display === "none") {
+            nasa.style.animation = "slideInFromLeft 1s 1";
+            nasa.style.display = "block";
+
+            console.log("test");
+        } else {
+            nasa.style.animation = "slideOutFromRight 1s 1";
+            setTimeout(() => {  nasa.style.display = "none"; }, 1000);
+        }
+        } else if (width > 700){
+    }
 } 
 function displayLaunchBlueOrigin() {
     let blueOrigin = document.getElementById('blueOriginLaunch');
    
+    let width  = window.innerWidth || document.documentElement.clientWidth || 
+    document.body.clientWidth;
+    let height = window.innerHeight|| document.documentElement.clientHeight|| 
+    document.body.clientHeight;
+   if (width < 700){
     if (blueOrigin.style.display === "none") {
-        blueOrigin.style.animation = "slideInFromTop 1s 1 ";
+        blueOrigin.style.animation = "slideInFromTop 1s 1";
         blueOrigin.style.display = "block";
         console.log("test");
     } else {
         blueOrigin.style.animation = "slideOutFromBottom 1s 1";
         setTimeout(() => {  blueOrigin.style.display = "none"; }, 1000);
     }
-   
+    } else if (width > 700){
+        if (blueOrigin.style.display === "none") {
+            blueOrigin.style.animation = "slideInFromLeft 1s 1";
+            blueOrigin.style.display = "block";
+
+            console.log("test");
+        } else {
+            blueOrigin.style.animation = "slideOutFromRight 1s 1";
+            setTimeout(() => {  blueOrigin.style.display = "none"; }, 1000);
+        }
+        } else if (width > 700){
+    }
 } function displayLaunchSpacex() {
     let spacex = document.getElementById('spacexLaunch');
    
+    let width  = window.innerWidth || document.documentElement.clientWidth || 
+    document.body.clientWidth;
+    let height = window.innerHeight|| document.documentElement.clientHeight|| 
+    document.body.clientHeight;
+   if (width < 700){
     if (spacex.style.display === "none") {
         spacex.style.animation = "slideInFromTop 1s 1";
         spacex.style.display = "block";
@@ -131,36 +168,21 @@ function displayLaunchBlueOrigin() {
     } else {
         spacex.style.animation = "slideOutFromBottom 1s 1";
         setTimeout(() => {  spacex.style.display = "none"; }, 1000);
-        
+    }
+    } else if (width > 700){
+        if (spacex.style.display === "none") {
+            spacex.style.animation = "slideInFromLeft 1s 1";
+            spacex.style.display = "block";
+
+            console.log("test");
+        } else {
+            spacex.style.animation = "slideOutFromRight 1s 1";
+            setTimeout(() => {  spacex.style.display = "none"; }, 1000);
+        }
+        } else if (width > 700){
     }
    
 } 
 
 
 
-
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    console.log("700");
-  } else {
-    document.body.style.backgroundColor = "pink";
-  }
-}
-
-var x = window.matchMedia("(max-width: 700px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
-
-
-
-
-//byt ut andra animations mot detta, använd fill-mode forward!!!
-document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
-});
