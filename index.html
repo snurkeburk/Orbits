@@ -8,16 +8,17 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <script src="scripts/devlogin.js"></script>
-        <script src="scripts/test.js"></script>
-        <script src="scripts/main.js"></script>
+        <script src="scripts/main.js"></script> 
+        <script src="scripts/post.js"></script> 
 
+        
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>Orbits</title>
 </head>
-<body onload="logIn(), showSlide()">
+<body onload="applyText(), showSlide()">
     
     <div class="nav-container">
         <p class="nav-name">Orbits.com</p>
@@ -132,22 +133,26 @@
         <div id="upload">
             <p>Developer box</p>
             <form>
-            <input type="text" id="text" name="usrname" value>
+            <input type="text" id="title" name="title" placeholder="Enter title" value>
+            <input type="text" id="main" name="main" placeholder="Enter text" value>
+
             </form>
             
-            <button onclick="putCookie(document.getElementsByTagName('form'));">Done</button>
-            <button id="upload-article" onclick="logIn()">Upload</button>
+            <button onclick="testValue()">Done</button>
+            <button id="upload-article" onclick="">Upload</button>
             <p>Latest update: </p><p id="test"></p>
            
-        <div class="upload-article">
-
-
-        </div>
+        <div class="upload-articles">
+            
         </div>
     </div>
+    <div class="post-container">
+    <h4 id="post-title">test title</h4>
+    <p id="post-main">test main</p>
+</div>
+</div>
 
     
-    <script src="scripts/test.js"></script>
 </body>
 
 <script src="scripts/upload.js"></script>

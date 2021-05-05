@@ -9,6 +9,8 @@ function setCookie(name, value)
 function putCookie(form)
 {
     setCookie("userName", form[0].usrname.value);
+
+
     return true;
   
   
@@ -29,17 +31,14 @@ function putCookie(form)
 
 
 
-function logIn() {   
+function logIn() {
   let element = document.getElementById("test");
   let a = today;
   let b = getCookie("userName")
   element.innerHTML = a;
-    let h = document.createElement("article");
-    let t = document.createTextNode(b);
-    h.appendChild(t);
-    document.body.appendChild(h);
+  let t = document.createTextNode(b);
+  setTimeout(() => {  h.appendChild(t); }, 200);
+  setTimeout(() => {  document.body.appendChild(h); }, 200);
   
-  
-
- 
 }
+

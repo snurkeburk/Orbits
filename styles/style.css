@@ -578,7 +578,7 @@ a:hover {
     grid-template-columns: 5vw 40vw 30vw;
     grid-gap: 0.5rem;
     background: url("/wallpaper.jpg");
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: rgb(253, 253, 253);
@@ -717,7 +717,7 @@ a:hover {
 
 #upload {
   display: flex;
-  width: 8rem;
+  width: 100%;
   flex-direction: column;
   float: right;
   border-style: dotted;
@@ -726,10 +726,7 @@ a:hover {
   padding-bottom: 5rem;
 }
 
-#upload p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
+
 
 #upload button {
   padding: 0.6rem;
@@ -744,22 +741,74 @@ a:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.226);
 }
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+#title {
+  text-align: center;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  border-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 20vw;
+  margin-bottom: 1rem;
+}
 
-#text {
-  padding-bottom: 5rem;
+#main {
+  background-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+  padding-bottom: 14rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  width: 50vw;
+}
+
+.post-container{
+  border-top-style: solid;
+  margin-top: 2rem;
+  border-width: 0.1rem;
+  border-color: rgba(255, 255, 255, 0.137);
+}
+
+#post-title{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+#triangle-down {
+  position:absolute;
+  left: 50%;
+  font-size: 1rem;
+  font-weight: 1000;
+  color: rgb(255, 255, 255);
+  animation: 1s ease-in-out 0s infinite slideUpDownUp;
+  cursor: default;
 }
 
 
 
-article {
-  position: relative;
-  top: 90rem;
-  left: 10rem;
+article,article0{
+  color: red;
+  margin-right: 20rem;
+  position: absolute;
+  top: 130rem;
+  left: 9rem;
+  width: 26rem;
+  height: 60%;
 }
 
+
+
 }
-
-
 @media (min-width: 1200px) {
 
   
