@@ -11,11 +11,11 @@ if (linkOfTheWebsiteUserCame == "http://127.0.0.1:5500/visitor.html"){
     upload.style.display = "none";
     notification.style.display = "none";
 
-} else if (linkOfTheWebsiteUserCame == "http://127.0.0.1:5500/developer.html"| linkOfTheWebsiteUserCame == "http://127.0.0.1:5500/index.html"){
+} else{
     console.log("logged in as developer");
     authorized = true;
     nonauthorized = false;
-    if (upload.style.display == "none");
+    if (upload.style.display == "none" || upload.style.display == "flex");
     upload.style.display = "block";
 } 
 

@@ -1,13 +1,12 @@
 myStorage = window.localStorage;
 
-let fruits = ['Apple', 'Banana'];
+let fruits = [2];
 let abow = [localStorage.length];
 function testValue(){
 
         let titleWindow = document.getElementById("title");
         let mainWindow = document.getElementById("main");
         let title = titleWindow.value;
-        
         let main = mainWindow.value;
         localStorage.setItem('title', title);
         localStorage.setItem('main', main);
@@ -26,3 +25,4 @@ function applyText() {
 function clear(){
     localStorage.clear();
 }
+

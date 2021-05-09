@@ -1,6 +1,3 @@
-
-
-
 function showSlide(){
     let showTools = document.getElementById("slideout");
     if (showTools.style.display === "none") {
@@ -80,11 +77,11 @@ window.addEventListener("scroll",(event) => {
 } else if (width > 700){
     console.log(scrollY)
     if (scrollY > 750) {
-         nasa.style.animation = "slideInFromLeft 2s 1";
+         nasa.style.animation = "slideInFromLeft 1s 1";
         nasa.style.visibility="visible";
-        blueOrigin.style.animation = "slideInFromLeft 3s 1";
+        blueOrigin.style.animation = "slideInFromLeft 1.25s 1";
         blueOrigin.style.visibility="visible";
-        spacex.style.animation = "slideInFromLeft 4s 1";
+        spacex.style.animation = "slideInFromLeft 1.5s 1";
         spacex.style.visibility="visible";
         console.log("show");
     } 

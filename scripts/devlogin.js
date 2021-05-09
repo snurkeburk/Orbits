@@ -4,16 +4,20 @@ function logIn() {
     let inputValPw = document.getElementById("password");
     let a = "asd";
     let b = "asd";
+    let ok = document.getElementById("developer-notice");
     if(inputVal.value==a && inputValPw.value == b){
         console.log("login successful");
         loggedIn = true;
         window.location.href = "/index.html";
+        ok.style.display = "flex";
 
    // confirm();
 } else {
     console.log("username / password incorrect!")
     loggedIn = false;
     error.style.color = "red";
+    ok.style.display = "none";
+
 }
 
 }

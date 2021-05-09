@@ -27,6 +27,7 @@ a {
 
 h1 {
   grid-row: 2;
+  color: rgba(255, 255, 255, 0.89);
   font-size: 15vw;
   margin: auto;
   font-weight: 100;
@@ -34,6 +35,42 @@ h1 {
   grid-column: 2;
   animation: 1s ease-in-out 0s 1 slideInFromRight;
 }
+
+/* start of contact.html styling */
+#contact-h1{
+  animation: 1.25s ease-in-out 0s 1 slideInFromTop;
+}
+#main-container-contact {
+  
+  animation: 1s ease-in-out 0s 1 slideInFromTop;
+  background-color: rgba(101, 131, 233, 0.144);
+  height: 19rem;
+  padding: 2rem;
+  width: 60vw;
+  margin-left: 10rem;
+  border-radius: 2rem;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#main-container-contact section ul li {
+  padding: 1rem;
+  list-style-type: lower-greek;
+  color: rgb(200, 200, 250);
+}
+
+#contact-information {
+  background-color: rgba(86, 86, 246, 0.644);
+  padding: 1rem;
+  border-radius: 2rem;
+  font-weight: 400;
+}
+
+#contact-information a:hover {
+  background-color:rgba(85, 121, 212, 0);
+  color:rgb(136, 136, 253);
+}
+/* end of contact.html styling */
 
 .main-container {
   justify-self: center;
@@ -443,7 +480,7 @@ a:hover {
 
 #upcoming-container {
   position: absolute;
-  top: 130vh;
+  top: 90vh;
   left: 20vw;
   color: seashell;
   z-index: 10;
@@ -518,7 +555,7 @@ a:hover {
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  border-style: double;
+  border-top-style: double;
   border-width: 0.05rem;
   position: absolute;
   font-size: 2rem;
@@ -568,6 +605,19 @@ a:hover {
   cursor: pointer;
 }
 
+
+#upload {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  float: right;
+  border-style: dotted;
+  border-width: 0.1rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+
 @media (min-width: 738px) {
   body,
   html {
@@ -586,6 +636,97 @@ a:hover {
     cursor: default;
     scroll-behavior: smooth;
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #11111100; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: rgb(40, 47, 65); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: rgba(122, 129, 170, 0.623); 
+}
+
+#wrap {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#blurb {
+  text-align:center;
+  width: 400px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.line-reveal {
+  animation: 5s ease-in-out 0s 1 fadeIn;
+  height: 3px;
+  overflow:hidden;
+  position:relative;
+  grid-column: 3;
+  width: 50vw;
+}
+  .overlay {
+    background: rgba(0, 0, 0, 0.281);
+    height: 10px;
+    position: absolute;
+    top:-5px;
+    width: 100%;
+    transform-origin: 100% 0;
+    animation: wipe 2s ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+    animation-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); 
+  }
+  
+  .line {
+    border: 3px solid white;
+    border-radius: 2rem;
+    backface-visibility:hidden;
+  }
+
+#line-b {
+  
+  left: 0;
+  bottom: 20%;
+  transform-origin: 0 0;
+  transform: rotate(-5deg);
+  
+}
+  .overlay {
+    animation-delay: .5s;
+  }
+  .line {
+    border-color: #50d4f54b;
+  
+}
+
+
+
+
+@keyframes wipe {
+  to {
+    transform: scaleX(0);
+  }
+}
+
 
   .center {
     display: none;
@@ -609,6 +750,7 @@ a:hover {
   .nav-container-ipad {
     display: flex;
     justify-content: space-around;
+   
     padding: 0.1rem;
     padding-top: 1rem;
     width: 50vw;
@@ -622,11 +764,11 @@ a:hover {
     background: none;
     cursor: pointer;
   }
-
+  
   a.middle {
     position: relative;
   }
-
+  
   a.middle:before {
     content: "";
     position: absolute;
@@ -639,13 +781,27 @@ a:hover {
     transform: scaleX(0);
     transition: all 0.2s ease-in-out;
   }
-
+  
   a.middle:hover:before {
     visibility: visible;
     transform: scaleX(1);
   }
-
-
+  
+  #a{
+    animation: 2s ease-in-out 1.1s 1 slideInFromTop;
+  }
+  #b{
+    animation: 2s ease-in-out 1.15s 1 slideInFromTop;
+  }
+  #c{
+    animation: 2s ease-in-out 1.2s 1 slideInFromTop;
+  }
+  #d{
+    animation: 2s ease-in-out 1.25s 1 slideInFromTop;
+  }
+  #e{
+    animation: 2s ease-in-out 1.3s 1 slideInFromTop;
+  }
   #upcoming-container {
   position: absolute;
   top: 70rem;
@@ -683,7 +839,7 @@ a:hover {
 
 .small ul {
   position: absolute;
-  left: 20vw;
+  left: 35vw;
   width: 50vw;
 }
 
@@ -693,6 +849,8 @@ a:hover {
 
 
 #about {
+  grid-column-start: 1;
+  grid-column-end: 3;
   border-top-style: solid;
   border-right-style: none;
   border-left-style: none;
@@ -805,12 +963,53 @@ article,article0{
   width: 26rem;
   height: 60%;
 }
-
+#app-root {
+  margin: 5rem auto;
+  max-width: 60ch;
+}
 
 
 }
+
 @media (min-width: 1200px) {
 
+
+
+
+  #about {
+    border-top-style: solid;
+    border-right-style: none;
+    border-left-style: none;
+    border-color: rgba(220, 226, 243, 0.397);
+    border-width: 0.05rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 18%;
+    margin-right: 18%;
+
+  }
   
+  .about-text {
+    border-top-style: none;
+    font-size: 0.9rem;
+    padding: 5rem;
+    padding-top: 0rem;
+    margin-bottom: 20rem;
+  }
+  
+  #developer-notice {
+    display: block;
+    grid-row: 4;
+    height: 5rem;
+    width: 33vw;
+    font-size: 0.8rem;
+
+  }
+
+  h1 {
+    animation: 1s ease-in-out 0s 1 slideInFromTop;
+
+  }
+
 
 }

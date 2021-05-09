@@ -10,8 +10,7 @@
         <script src="scripts/devlogin.js"></script>
         <script src="scripts/main.js"></script> 
         <script src="scripts/post.js"></script> 
-
-        
+        <script src="scripts/testUpload.js"></script> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
@@ -24,12 +23,19 @@
         <p class="nav-name">Orbits.com</p>
     </div>
     <div class="nav-container-ipad">
-        <a class="middle" href="#upcoming-container">Upcoming</a>
-        <a class="middle" href="#about">News</a>
-        <a class="middle" href="/developer.html">Developer (req. login)</a>
-        <a class="middle">Terms of service</a>
-        <a class="middle">Report</a>
+        <a id="a" class="middle" href="#upcoming-container">Upcoming</a>
+        <a id="b" class="middle" href="#about">News</a>
+        <a id="c" class="middle" href="./developer.html">Developer (req. login)</a>
+        <a id="d" class="middle" href="./terms.html">Terms of service</a>
+        <a id="e" class="middle" href="./contact.html">Contact</a>
+        
     </div>
+    
+    <div class="line-reveal" id="line-a">
+        <div class="overlay"></div>
+        <div class="line"></div>
+      </div>
+
     <button onclick="showSlide()" class="center">
         <div>
         </div>
@@ -79,7 +85,7 @@
             <li>News</li>
             <li><a href="/developer.html" >Developer (req. login)</a></li>
             <li>Terms of service</li>
-            <li>Report an issue</li>
+            <li>Contact</li>
         </ul>
     </div>
 
@@ -94,30 +100,38 @@
             <div class="small">
             <button onclick="displayLaunchNasa()" class="comp-btn"><img class="comp" id="comp-one" src="nasa-logo-web-rgb.png"  height="auto"></button>
             <ul id="nasaLaunch">
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-
+                <li>Rocket Launch: May 17, 2021 1:35PM ET</li>
+                <li>Rocket Launch: NET October 16, 2021 TBA | ULA Atlas V Lucy Mission
+                    When: Oct 16, 2021
+                    
+                    Where: Cape Canaveral Air Force Station, SLC-41</li>
             </ul>
             </div>
             <div class="small">
             <button onclick="displayLaunchBlueOrigin()" class="comp-btn"><img class="comp" id="comp-two" src="Blue_Origin-Logo.wine.png"  height="auto"></button>
             <ul id="blueOriginLaunch">
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
+                <li>Launch - New Shepard Crewed Test Flight 1 |
+                    Texas, United States | Jul 20.
+                </li>
+                <li>Launch - New Glenn Flight 1 | Florida, United States | 
+                    Q4 2022
+                </li>
+
 
             </ul>
             </div>
             <div class="small">
             <button onclick="displayLaunchSpacex()" class="comp-btn"><img class="comp" id="comp-three" src="SpaceX-Logo.png"  height="auto"></button>
             <ul id="spacexLaunch">
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
-                <li>Launch - 2021-04-09</li>
+                <li>Rocket Launch: June 3, 2021 TBA | SpaceX Falcon 9 CRS-22
+                    When: Jun 03, 2021
+                    
+                    Where: Kennedy Space Center LC-39A</li>
+                <li>Rocket Launch: NET October 23, 2021, TBA | SpaceX Falcon 9 Crew-3
+                    When: Oct 23, 2021 TBA
+                    
+                    Where: Launch Pad TBA</li>
+
             </ul>
             </div>
         </div>
@@ -152,7 +166,7 @@
 </div>
 </div>
 
-    
+<script src="scripts/testUpload.js"></script>
 </body>
 
 <script src="scripts/upload.js"></script>
