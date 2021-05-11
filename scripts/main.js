@@ -36,6 +36,7 @@ window.addEventListener("scroll",(event) => {
     let blueOrigin = document.getElementById('comp-two')
     let spacex = document.getElementById('comp-three')
     let arrow = document.getElementById('triangle-down');
+    let footer = document.getElementById('footer');
     console.log(height, width);
     if (width < 700){
     if (scrollY >= height/2 && scrollY <= height*2){
@@ -71,10 +72,21 @@ window.addEventListener("scroll",(event) => {
     //hide down arrow
     if (scrollY >=210){
         arrow.style.visibility="hidden";
+        footer.style.visibility="visible";
     } else {
         arrow.style.visibility="visible";
+        footer.style.visibility="hidden";
+
     }
 } else if (width > 700){
+    if (scrollY > 475){
+
+        footer.style.position="fixed";
+        footer.style.bottom="0";
+    } else {
+        footer.style.position="absolute";
+        footer.style.bottom="-30rem";
+    }
     console.log(scrollY)
     if (scrollY > 750) {
          nasa.style.animation = "slideInFromLeft 1s 1";
