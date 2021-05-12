@@ -8,7 +8,7 @@ function logIn() {
     if(inputVal.value==a && inputValPw.value == b){
         console.log("login successful");
         loggedIn = true;
-        window.location.href = "/index.html";
+        window.location.href = "./index.html";
         ok.style.display = "flex";
 
    // confirm();
@@ -25,11 +25,11 @@ function logIn() {
 
 function visitor(){
     loggedIn = false;
-    window.location.href = "/visitor.html";
+    window.location.href = "./visitor.html";
 }
 
 function redirectAsVisitor(){
-    setTimeout(() => { window.location.href = "/index.html"; ; }, 1000);
+    setTimeout(() => { window.location.href = "./index.html"; ; }, 1000);
     
 
 }
