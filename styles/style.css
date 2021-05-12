@@ -678,7 +678,9 @@ form {
     cursor: default;
     scroll-behavior: smooth;
   }
-
+  .small ul li {
+    text-align: start;
+  }
   ::-webkit-scrollbar {
     width: 10px;
   }

@@ -2,8 +2,8 @@ function logIn() {
     let error = document.getElementById("error");
     let inputVal = document.getElementById("username");
     let inputValPw = document.getElementById("password");
-    let a = "asd";
-    let b = "asd";
+    let a = "webb";
+    let b = "te19c";
     let ok = document.getElementById("developer-notice");
     if(inputVal.value==a && inputValPw.value == b){
         console.log("login successful");
