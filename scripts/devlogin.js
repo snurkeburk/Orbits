@@ -3,7 +3,7 @@ function logIn() {
     let inputVal = document.getElementById("username");
     let inputValPw = document.getElementById("password");
     let a = "webb";
-    let b = "te19c";
+    let b = "te19d";
     let ok = document.getElementById("developer-notice");
     if(inputVal.value==a && inputValPw.value == b){
         console.log("login successful");

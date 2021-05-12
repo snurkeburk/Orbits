@@ -10,7 +10,7 @@ html {
   display: grid;
   grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 2fr;
   grid-template-columns: 20vw 60vw 20vw;
-  background: url("/styles/wallpaper.jpg");
+  background: url("/images/wallpaper.jpg");
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -508,7 +508,7 @@ footer {
 
 #upcoming-container {
   position: absolute;
-  top: 180vh;
+  top: 70rem;
   left: 25%;
   color: seashell;
   z-index: 10;

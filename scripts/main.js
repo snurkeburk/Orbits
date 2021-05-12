@@ -1,16 +1,39 @@
+window.addEventListener('resize', (reportWindowSize) => {
+    console.log("resizing");
+    let width  = window.innerWidth || document.documentElement.clientWidth || 
+    document.body.clientWidth;
+    let height = window.innerHeight|| document.documentElement.clientHeight|| 
+    document.body.clientHeight;
+    let show;
+    if (width < 700){
+        showSlide();
+    } else if (width > 700){
+        hideSlide();
+    }
+    
+});
+
+function hideSlide(){
+    let showTools = document.getElementById("slideout");
+    showTools.style.display = "none";
+}
+
 function showSlide(){
     let showTools = document.getElementById("slideout");
-    if (showTools.style.display === "none") {
-        showTools.style.animation = "slideInFromLeft 2s 1";
-        showTools.style.display = "flex";
-        console.log(window);
-    } else
-    {
-        showTools.style.animation = "slideOutFromRight 2s 1";
-        setTimeout(() => {  showTools.style.display = "none"; }, 1000);
-    }
+    
+        
+        if (showTools.style.display === "none") {
+            showTools.style.animation = "slideInFromLeft 2s 1";
+            showTools.style.display = "flex";
+            console.log(window);
+        } else
+        {
+            showTools.style.animation = "slideOutFromRight 2s 1";
+            setTimeout(() => {  showTools.style.display = "none"; }, 1000);
+        }
+    } 
 
-}
+    
 
 function hideOk(){
     let ok = document.getElementById("developer-notice");
