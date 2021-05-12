@@ -1,11 +1,15 @@
 function showSlide(){
     let showTools = document.getElementById("slideout");
     if (showTools.style.display === "none") {
+        showTools.style.animation = "slideInFromLeft 2s 1";
         showTools.style.display = "flex";
         console.log(window);
-    } else {
-        showTools.style.display = "none";
+    } else
+    {
+        showTools.style.animation = "slideOutFromRight 2s 1";
+        setTimeout(() => {  showTools.style.display = "none"; }, 1000);
     }
+
 }
 
 function hideOk(){
@@ -79,8 +83,10 @@ window.addEventListener("scroll",(event) => {
 
     }
 } else if (width > 700){
+    if (scrollY > 300){
+        footer.style.visibility="visible";
+    }
     if (scrollY > 475){
-
         footer.style.position="fixed";
         footer.style.bottom="0";
     } else {

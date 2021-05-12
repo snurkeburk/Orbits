@@ -10,7 +10,7 @@ html {
   display: grid;
   grid-template-rows: 0.1fr 0.1fr 0.1fr 2fr 2fr;
   grid-template-columns: 20vw 60vw 20vw;
-  background: url("/wallpaper.jpg");
+  background: url("./wallpaper.jpg");
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -405,9 +405,10 @@ a:hover {
   cursor: default;
 }
 footer {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   text-align: center;
+
   z-index: 9999;
   padding: 0rem;
   background-color: rgba(0, 0, 0, 0.356);
@@ -441,7 +442,6 @@ footer {
   z-index: 10;
   width: 20rem;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  display: none;
   text-decoration: none;
   background: #2a729e;
   display: flex;
@@ -455,7 +455,6 @@ footer {
     #00000000 100%
   );
   border-radius: 0.2rem;
-  animation: 1s ease-in-out 0s 1 slideInFromLeft;
 }
 #slideout ul li {
   z-index: 11;
@@ -485,8 +484,8 @@ footer {
 
 #upcoming-container {
   position: absolute;
-  top: 90vh;
-  left: 20vw;
+  top: 180vh;
+  left: 25%;
   color: seashell;
   z-index: 10;
   font-size: 2rem;
@@ -527,6 +526,7 @@ footer {
   display: none;
 }
 .small ul li {
+  text-align: center;
   padding: 1rem;
   list-style-type: decimal;
 }
@@ -942,6 +942,11 @@ footer {
     margin: 5rem auto;
     max-width: 60ch;
   }
+}
+
+#slideout {
+  display: none;
+  visibility: hidden;
 }
 
 @media (min-width: 1200px) {
