@@ -73,14 +73,17 @@ window.addEventListener("scroll",(event) => {
 
 
         
+    if (scrollY >200){
+        footer.style.visibility = "visible";
+    } 
     //hide down arrow
-    if (scrollY >=210){
+    if (scrollY >210){
         arrow.style.visibility="hidden";
-        footer.style.visibility="visible";
+        footer.style.position =  "fixed";
+        footer.style.animation = "slideInFromTop 2s 1";
     } else {
         arrow.style.visibility="visible";
-        footer.style.visibility="hidden";
-
+        footer.style.visibility = "hidden";
     }
 } else if (width > 700){
     if (scrollY > 300){
