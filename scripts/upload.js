@@ -11,7 +11,7 @@ if (linkOfTheWebsiteUserCame == "http://127.0.0.1:5500/visitor.html"){
     upload.style.display = "none";
     notification.style.display = "none";
 
-} else{
+}  else{
     console.log("logged in as developer");
     authorized = true;
     nonauthorized = false;
