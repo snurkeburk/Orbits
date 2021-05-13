@@ -5,7 +5,7 @@
 
 body {
   background-color: rgb(29, 29, 56);
-  background: url("/images/bWallpaper.jpg");
+  background: url("bWallpaper.jpg");
   color: #fff;
   font-family: "Abel", sans-serif;
   background-position: center;
